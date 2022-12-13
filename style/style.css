@@ -1,0 +1,261 @@
+body{
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 24px;
+    color: white;
+    background-color: hsl(222, 26%, 31%);
+
+}
+
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    /* border: 10px solid black; */
+    margin-top: 200px;
+    width: 390px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================header==================================== */
+/* ==========================header==================================== */
+
+.header{
+    /* border: 2px solid red; */
+    height: 40px;
+    padding-left: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.theme{
+    font-size: 10px;
+    display: block;
+    position: relative;
+    top: 15px;
+    left: -50px;
+    right: 0px;
+    bottom: 0;
+}
+
+.mark1, .mark2 {
+    font-size: 10px;
+    display: block;
+    position: relative;
+}
+
+.mark1{
+    top: -10px;
+    right: 0px;
+    left: 5px;
+}
+.mark2{
+    top: -19px;
+    right: 0px;
+    left: 28px;
+    bottom: 0px;
+}
+
+/* -------------------------TOGGLE KEY----------------------------------- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(223, 31%, 20%);
+    transform: .4s;
+    border-radius: 9px;
+}
+
+.switch input{display: none;}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+
+    background-color: hsl(6, 63%, 50%);
+    transition: 0.4s;
+    border-radius: 7px;
+
+}
+
+input:checked + .slider{
+    background-color:hsl(223, 31%, 20%);
+}
+input:checked + .slider:before{
+    transform: translateX(22px);
+}
+/* -------------------------------------------------------------------- */
+
+
+/* ===========================DISPLAY================================= */
+/* ===========================DISPLAY================================= */
+.display{
+    /* border: 2px solid red; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row-reverse;
+    align-items: center;
+
+    border-radius: 8px;
+    background-color: hsl(224, 36%, 15%);
+    
+    margin: 15px 0;
+    height: 90px;
+    padding: 0 20px;
+    font-size: 42px;
+}
+
+/* ==========================KEYPAD=================================== */
+/* ==========================KEYPAD=================================== */
+
+.keycontainer{
+    /* border: 1px solid red; */
+    margin: 8px;
+    margin-top: 13px;
+}
+
+.keypad{
+    /* border: 2px solid red; */
+    border-radius: 8px;
+    background-color: hsl(223, 31%, 20%);
+    height: 340px;
+
+    display: flex;
+    flex-direction: column;
+
+    /* padding: 5px 0; */
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.key{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
+    box-shadow: 0px 4px hsl(28, 16%, 65%);
+    
+    margin: 10px;
+    width: 74px;
+    height: 42px;
+    font-weight: bolder;
+    font-size: 28px;
+}
+.largeKey{
+    width: 170px;
+}
+
+.del, .reset{
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 4px  hsl(224, 28%, 35%);
+    color: white;
+    font-size: 20px;
+}
+
+.equals{
+    background-color:  hsl(6, 63%, 50%);
+    box-shadow: 0px 4px  hsl(6, 70%, 34%);
+    color: white;
+}
+
+.key:active{
+    box-shadow: 0 2px hsl(224, 28%, 35%);
+    transform: translateY(2px);
+}
+
+.key:hover {
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    
+}
+
+.del:hover, .reset:hover{
+    background-color: hsl(225, 46%, 74%);
+}
+
+.equals:hover{
+    background-color:  hsl(6, 85%, 68%);
+
+}
+
+/* ========================= T H E M E ============================= */
+/* ========================= L I G H T ============================= */
+
+.lightBody {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(60, 10%, 19%);
+}
+
+.lightKeypad {
+    background-color: hsl(0, 5%, 81%);
+}
+
+/* ------------------KEY------------------ */
+.lightDisplay {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.lightDel {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: hsl(185, 58%, 25%);
+}
+
+.lightReset {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: hsl(185, 58%, 25%);
+}
+
+.lightEquals {
+    background-color: hsl(25, 68%, 54%);
+    box-shadow: hsl(25, 99%, 27%);
+}
+
+.lightSlider {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.lightDel:hover, .lightReset:hover{
+    background-color: hsl(185, 58%, 25%);
+}
+
+.lightEquals:hover{
+    background-color:   hsl(25, 99%, 27%);
+
+}
+
+
+
+
+
