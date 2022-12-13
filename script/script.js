@@ -68,9 +68,7 @@ document.addEventListener("keydown", handleKey);
 // =========================== T H E M E =================================
 // =======================================================================
 
-
-
-var checkBox = document.querySelector("#checkTheme");
+let theme = 0;
 document.querySelector("#checkTheme").addEventListener("click", () => {
     document.querySelector("body").classList.toggle("lightBody");
     document.querySelector(".keypad").classList.toggle("lightKeypad");
@@ -78,9 +76,14 @@ document.querySelector("#checkTheme").addEventListener("click", () => {
     document.querySelector(".del").classList.toggle("lightDel");
     document.querySelector(".reset").classList.toggle("lightReset");
     document.querySelector(".equals").classList.toggle("lightEquals");
-    document.querySelector(".slider").classList.toggle("lightSlider");
-    // document.querySelector(".slider").style.backgroundColor = "hsl(0, 5%, 81%)";
-
+    if(theme==0){
+        theme=1;
+        document.querySelector(".slider").style.backgroundColor = "hsl(0, 5%, 81%)";
+    }
+    else{
+        theme=0;
+        document.querySelector(".slider").style.backgroundColor = "hsl(223, 31%, 20%)";
+    }
 });
 
 
